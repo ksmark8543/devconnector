@@ -17,7 +17,7 @@ const Register = () => {
   const onSubmit = async e => {
     e.preventDefault();
     if (password !== password2) {
-      console.log('sss');
+      console.log('incorrect password');
     } else {
       const newUser = {
         name,
@@ -29,13 +29,16 @@ const Register = () => {
         const config = {
           headers: {
             'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
           },
         };
 
         const body = JSON.stringify(newUser);
         const res = await axios.post('/api/users', body, config);
+
+        console.log(res.data);
       } catch (err) {
-        console.log(err.response.data);
+        console.log(err.message);
       }
     }
   };

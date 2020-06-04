@@ -10,7 +10,7 @@ const User = require('../../models/User');
 // @route   GET api/users
 // @desc    Test route
 // @access  Public
-router.get(
+router.post(
   '/',
   //body 의 값에서 밸리데이션 체크
   [
