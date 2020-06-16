@@ -8,7 +8,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <ul>
       <li>
         <Link to='/dashboard'>
-          <i className='fas fa-sign-out-alt'></i> <span>Dashboard</span>
+          <i className='fas fa-user' /> <span>Dashboard</span>
         </Link>
       </li>
       <li>
