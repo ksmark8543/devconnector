@@ -16,8 +16,6 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
-  console.log('auth reducer');
-
   const { type, payload } = action;
 
   switch (type) {
